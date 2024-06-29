@@ -15,22 +15,21 @@ export interface Database {
           U_ID: number;
           //   name: string
           U_NAME: string;
-          U_EMAIL: string;
           U_CONTACT: number;
-          U_AGE: string;
+          U_AGE: number;
           U_SEX: string;
           U_HOUSE_NO: string;
           U_STREET: string;
           U_CITY: string;
           U_STATE: string;
           U_PINCODE: number;
+          U_EMAIL: string;
           // data: Json | null
         };
         Insert: {
           // the data to be passed to .insert()
           id?: never; // generated columns must not be supplied
           U_NAME: string;
-          U_EMAIL: string;
           U_CONTACT: number;
           U_AGE: string;
           U_SEX: string;
@@ -39,14 +38,12 @@ export interface Database {
           U_CITY: string;
           U_STATE: string;
           U_PINCODE: number;
+          U_EMAIL: string;
         };
         Update: {
           // the data to be passed to .update()
           id?: never;
-          // name?: string      // `not null` columns are optional on .update()
-          // data?: Json | null
           U_NAME?: string;
-          U_EMAIL?: string;
           U_CONTACT?: number;
           U_AGE?: string;
           U_SEX?: string;
@@ -55,6 +52,7 @@ export interface Database {
           U_CITY?: string;
           U_STATE?: string;
           U_PINCODE?: number;
+          U_EMAIL?: string;
         };
       };
       CRIME_DETAILS: {
