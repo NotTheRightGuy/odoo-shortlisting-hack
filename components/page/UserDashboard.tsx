@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Map from "../Map";
 import WatchDogsIcon from "../ui/WatchDogsIcon";
@@ -20,11 +20,10 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
-import {
-    UserButton
-  } from "@clerk/nextjs";
+import { UserButton } from "@clerk/nextjs";
 
 import { supabase } from "@/db";
+import Link from "next/link";
 
 export default function UserDashboard() {
   const [crimeType, setCrimeType] = React.useState("");
@@ -37,14 +36,16 @@ export default function UserDashboard() {
     <>
       <main className="h-screen">
         <nav className="flex items-center w-screen justify-between px-6 ">
-          <div className="scale-75">
-            <WatchDogsIcon />
-          </div>
+          <Link href={"/"} className="scale-[0.7] relative -left-[30px]">
+            <WatchDogsIcon width={250} height={60} />
+          </Link>
           <div>
             {/* <Button className="bg-slate-300 rounded-full hover:bg-slate-400">
               Logout
             </Button> */}
-            <UserButton></UserButton>
+            <div className="scale-[1.3  ]">
+              <UserButton></UserButton>
+            </div>
           </div>
         </nav>
         <div className="flex border-t-2 h-[85vh]">
