@@ -13,5 +13,12 @@ Interactive Map application for real time crime reporting
 
 ### In progress
 
-- Database design
+
+- Landing page (Vedant & Devvrat)
+- Incedent Report (Janmejay)
+
+### Completed
+- Database integration
 - Sign Up form
+- onboarding page
+  
