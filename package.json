@@ -9,8 +9,7 @@
     "lint:check": "eslint . --config .eslintrc.json",
     "lint:fix": "eslint --fix . --config .eslintrc.json",
     "format:check": "prettier --check --ignore-path .gitignore .",
-    "format:fix": "prettier --write --ignore-path .gitignore .",
-    "prepare": "husky"
+    "format:fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
     "@clerk/nextjs": "^5.1.6",
@@ -30,7 +29,8 @@
     "react-spring": "^9.7.3",
     "recoil": "^0.7.7",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "ws": "^8.17.1"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -39,10 +39,8 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
     "eslint-config-prettier": "^9.1.0",
-    "husky": "^9.0.11",
     "postcss": "^8",
     "prettier": "3.3.2",
-    "prettier-plugin-tailwindcss": "^0.6.5",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

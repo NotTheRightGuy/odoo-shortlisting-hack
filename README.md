@@ -15,6 +15,7 @@ Interactive Map application for real time crime reporting
 
 - Landing page (Vedant & Devvrat)
 - Incedent Report (Janmejay)
+- Police dashboard (Jeet)
 
 ### Completed
 
