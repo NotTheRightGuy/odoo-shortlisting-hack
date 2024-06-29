@@ -18,16 +18,13 @@ function generateRandomCoordinates(length: number): CoordinateSet[] {
   const result: CoordinateSet[] = [];
 
   for (let i = 0; i < length; i++) {
-    const latitude = Math.random() * 180 - 90;  // Range: -90 to 90
-    const longitude = Math.random() * 360 - 180;  // Range: -180 to 180
-    const size = Math.random() * 0.02 + 0.1;  // Range: 0.1 to 1
+    const latitude = Math.random() * 180 - 90; // Range: -90 to 90
+    const longitude = Math.random() * 360 - 180; // Range: -180 to 180
+    const size = Math.random() * 0.02 + 0.1; // Range: 0.1 to 1
 
     result.push({
-      location: [
-        Number(latitude.toFixed(4)),
-        Number(longitude.toFixed(4))
-      ],
-      size: Number(size.toFixed(2))
+      location: [Number(latitude.toFixed(4)), Number(longitude.toFixed(4))],
+      size: Number(size.toFixed(2)),
     });
   }
 
@@ -46,7 +43,7 @@ const GLOBE_CONFIG: COBEOptions = {
   mapSamples: 16000,
   mapBrightness: 1,
   baseColor: [1, 1, 1],
-  markerColor: [199, 0, 0 ],
+  markerColor: [199, 0, 0],
   glowColor: [1, 1, 1],
   markers: generateRandomCoordinates(10),
 };
@@ -120,7 +117,7 @@ export const Globe = ({
   return (
     <div
       className={cn(
-        "absolute inset-0 left-[60%] top-[30%] rotate-[30deg] scale-[1.8] aspect-[1/1] w-full max-w-[600px]",
+        "absolute inset-0 left-[60%] top-[30%] aspect-[1/1] w-full max-w-[600px] rotate-[30deg] scale-[1.8]",
         className
       )}
     >

@@ -7,7 +7,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Watch Dogs | Enhancing Security",
-  description: "Empowering Communities to Report Incidents, Enabling Switch Response ,and Facilitating Effective Resolution",
+  description:
+    "Empowering Communities to Report Incidents, Enabling Switch Response ,and Facilitating Effective Resolution",
 };
 
 export default function RootLayout({
@@ -37,11 +38,17 @@ export default function RootLayout({
             href="public/favicon-16x16.png"
           />
           <link rel="manifest" href="public/site.webmanifest" />
-          <link rel="mask-icon" href="public/safari-pinned-tab.svg" color="#5bbad5" />
+          <link
+            rel="mask-icon"
+            href="public/safari-pinned-tab.svg"
+            color="#5bbad5"
+          />
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#ffffff" />
         </head>
-        <body className={`${inter.className} overflow-x-hidden`}>{children}</body>
+        <body className={`${inter.className} overflow-x-hidden`}>
+          {children}
+        </body>
       </html>
     </Provider>
   );
