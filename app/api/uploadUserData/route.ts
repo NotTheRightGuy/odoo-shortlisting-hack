@@ -49,10 +49,7 @@ export async function POST(request: any, response: any) {
             U_EMAIL
         });
 
-
-
         return NextResponse.json({ error });
-        // return NextResponse.json(data);
     } catch (err) {
         return NextResponse.error();
     }
