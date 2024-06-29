@@ -15,7 +15,10 @@ function Navbar() {
             <nav className="flex items-center gap-14">
 
                 <Link href={"/"} className="text-base font-normal text-gray-600">
-                    Reports
+                    Home
+                </Link>
+                <Link href={"/police/crimehistory"} className="text-base font-normal text-gray-600">
+                    Cases
                 </Link>
                 {
                     isSignedIn ? (
@@ -27,12 +30,10 @@ function Navbar() {
                 {/* <Link href={"/"} className="text-base font-normal text-gray-600">
                     Dashboard
                 </Link> */}
-                <Link href={"/"} className="text-base font-normal text-gray-600">
-                    Cases
-                </Link>
-                <Link href={"/"} className="text-base font-normal text-gray-600">
+
+                {/* <Link href={"/"} className="text-base font-normal text-gray-600">
                     Security
-                </Link>
+                </Link> */}
                 {isSignedIn ? (
                     <UserButton />) :
                     <Link
