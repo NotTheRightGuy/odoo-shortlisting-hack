@@ -4,16 +4,11 @@ type dimension = {
   height?: number;
 };
 function WatchDogsIcon({ width, height }: dimension) {
-  const defaultWidth = 243;
-  const defaultHeight = 58;
-  width = width || defaultWidth;
-  height = height || defaultHeight;
   return (
     <>
       <svg
         width={width}
         height={height}
-        viewBox={`0 0 ${width} ${height}`}
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >

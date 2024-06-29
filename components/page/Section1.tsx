@@ -6,7 +6,7 @@ import { Globe } from "../ui/Globe";
 
 function Section1() {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden ">
       <Navbar />
       <Globe />
       <div className="flex h-screen w-screen flex-col items-start justify-center gap-5 px-20">
