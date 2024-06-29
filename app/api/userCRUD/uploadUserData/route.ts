@@ -1,6 +1,8 @@
 import { createClient } from "@supabase/supabase-js";
 import { Database } from "@/database.types";
 import { NextResponse } from "next/server";
+import { clerkClient } from "@clerk/nextjs/server";
+
 
 const supabase = createClient<Database>(
     process.env.NEXT_PUBLIC_SUPABASE_URL || "",
@@ -28,7 +30,7 @@ const validate = (data: any) => {
 export async function POST(request: any, response: any) {
     try {
         const { U_NAME, U_EMAIL, U_CONTACT, U_AGE, U_SEX,
-            U_HOUSE_NO, U_STREET, U_CITY, U_STATE, U_PINCODE } = await request.json();
+            U_HOUSE_NO, U_STREET, U_CITY, U_STATE, U_PINCODE, userId } = await request.json();
         
         // console.log(U_NAME, U_EMAIL, U_CONTACT, U_AGE, U_SEX, U_HOUSE_NO, U_STREET, U_CITY, U_STATE, U_PINCODE);
         const isValid = validate({ U_NAME, U_EMAIL, U_CONTACT, U_AGE, U_SEX, U_HOUSE_NO, U_STREET, U_CITY, U_STATE, U_PINCODE });
@@ -36,7 +38,7 @@ export async function POST(request: any, response: any) {
             return NextResponse.json({error: {message : isValid}});
         }
 
-        const { error } = await supabase.from("USER_DETAILS").insert({
+        const { error } = await supabase.from("USER_DETAILS").upsert({
             U_NAME,
             U_CONTACT,
             U_AGE,
@@ -48,6 +50,17 @@ export async function POST(request: any, response: any) {
             U_PINCODE,
             U_EMAIL
         });
+        // const { role, userId } =  await body.json();
+        
+        if (!error) {
+            return NextResponse.json({ error });
+        }
+
+        await clerkClient.users.updateUserMetadata(userId, {
+          publicMetadata : {
+            onBoardingDone: true
+          }
+        })
 
         return NextResponse.json({ error });
     } catch (err) {
