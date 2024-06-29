@@ -1,11 +1,11 @@
 import Map from "../Map";
 import Section1 from "./Section1";
-import Section5 from "./Section5";
+import Section2 from "./Section2";
 export default function Landing() {
   return (
-    <div className="h-max w-screen">
+    <div className="h-maxf w-screen overflow-x-hidden">
       <Section1 />
-      <Section5 />
+      <Section2 />
     </div>
   );
 }
