@@ -1,11 +1,14 @@
+"use client"
 import React from "react";
 import Navbar from "../ui/Navbar";
 import Link from "next/link";
+import { Globe } from "../ui/Globe";
 
 function Section1() {
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
       <Navbar />
+      <Globe />
       <div className="flex h-screen w-screen flex-col items-start justify-center gap-5 px-20">
         <h1 className="text-5xl font-extrabold tracking-tight">
           Empowering Communities,
