@@ -1,8 +1,8 @@
-import { SquareGridFaded } from "@/components/ui/SquareBg";
+import UserDashboard from "@/components/page/UserDashboard";
 import React from "react";
 
 function page() {
-  return <SquareGridFaded faded={true}>Dashboard</SquareGridFaded>;
+  return <UserDashboard />;
 }
 
 export default page;

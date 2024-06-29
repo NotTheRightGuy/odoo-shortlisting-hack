@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { auth } from "@clerk/nextjs/server";
 
 import { useUser } from "@clerk/nextjs";
 import watchdogLogo from "@/components/images/watchdogLogo.png";
@@ -12,8 +13,13 @@ function OnBoarding() {
   if (isSignedIn) {
     console.log(user);
   }
+
   if (isLoaded && !isSignedIn) {
     redirect("/auth/sign-in");
+  }
+
+  if (isLoaded && user.publicMetadata.onBoardingDone) {
+    redirect("/user/dashboard");
   }
 
   const [userDetails, setUserDetails] = useState({
