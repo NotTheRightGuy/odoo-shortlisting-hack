@@ -18,19 +18,6 @@ function OnBoarding() {
     pincode: "",
   });
 
-  // const [errorDetails, setErrorDetails] = useState({
-  //   name: "",
-  //   phone: "",
-  //   age: "",
-  //   gender: "",
-  //   houseNo: "",
-  //   societyName: "",
-  //   area: "",
-  //   city: "",
-  //   state: "",
-  //   pincode: "",
-  // });
-
   const handleChange = (e: any) => {
     setUserDetails({
       ...userDetails,
