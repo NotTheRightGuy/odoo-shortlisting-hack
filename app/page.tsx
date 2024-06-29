@@ -1,4 +1,5 @@
-import PoliceDashboard from "@/components/page/PoliceDashboard";
+import React from "react";
+
 export default function Home() {
-  return <PoliceDashboard />;
+  return <div>Landing</div>;
 }

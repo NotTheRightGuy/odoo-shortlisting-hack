@@ -6,7 +6,7 @@ import Provider from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Nextjs Starter pack",
+  title: "Watch Dogs",
   description: "Nextjs Starter pack with batteries included",
 };
 
