@@ -1,7 +1,7 @@
 import React from "react";
 type dimension = {
-  width?: string;
-  height?: string;
+  width?: number;
+  height?: number;
 };
 function WatchDogsIcon({ width, height }: dimension) {
   return (
