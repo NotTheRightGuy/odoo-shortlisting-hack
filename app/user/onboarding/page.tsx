@@ -33,7 +33,10 @@ function OnBoarding() {
     U_CITY: "",
     U_STATE: "",
     U_PINCODE: "",
+    userId : ""
   });
+
+
 
   const handleChange = (e: any) => {
     setUserDetails({
@@ -42,10 +45,16 @@ function OnBoarding() {
     });
   };
 
+//   if (isSignedIn && user) {
+//       setUserDetails({
+//         ...userDetails,
+//         userId: user.id
+//       });
+//     }
   const handleSubmit = (e: any) => {
     e.preventDefault();
 
-    fetch("/api/uploadUserData", {
+    fetch("/api/userCRUD/uploadUserData", {
       method: "POST",
       body: JSON.stringify(userDetails),
     })

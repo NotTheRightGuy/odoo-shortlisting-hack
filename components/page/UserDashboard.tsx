@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React from "react";
 import Map from "../Map";
 import WatchDogsIcon from "../ui/WatchDogsIcon";
@@ -20,6 +20,9 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
+import {
+    UserButton
+  } from "@clerk/nextjs";
 
 import { supabase } from "@/db";
 
@@ -38,9 +41,10 @@ export default function UserDashboard() {
             <WatchDogsIcon />
           </div>
           <div>
-            <Button className="bg-slate-300 rounded-full hover:bg-slate-400">
+            {/* <Button className="bg-slate-300 rounded-full hover:bg-slate-400">
               Logout
-            </Button>
+            </Button> */}
+            <UserButton></UserButton>
           </div>
         </nav>
         <div className="flex border-t-2 h-[85vh]">

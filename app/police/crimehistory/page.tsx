@@ -1,6 +1,6 @@
 "use client"
 import * as React from 'react';
-import { DataGrid, GridRowsProp, GridColDef } from '@mui/x-data-grid';
+// import { DataGrid, GridRowsProp, GridColDef } from '@mui/x-data-grid';
 import { useState, useEffect } from 'react';
 
 
@@ -52,8 +52,8 @@ export default function CrimeHistory() {
         })
     return(
         <div>
-            {/* Checking */}
-            <DataGrid rows={rows} columns={columns} />
+            Checking
+            {/* <DataGrid rows={rows} columns={columns} /> */}
 
         </div>
     )
