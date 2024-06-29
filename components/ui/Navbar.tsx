@@ -39,7 +39,7 @@ function Navbar() {
                         href={"/auth/sign-up"}
                         className="rounded-3xl bg-blue-600 px-7 py-4 text-base font-bold text-white"
                     >
-                        "Create Account"
+                        Create Account
                     </Link>
                 }
 

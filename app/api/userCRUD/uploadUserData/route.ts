@@ -53,14 +53,13 @@ export async function POST(request: any, response: any) {
         // const { role, userId } =  await body.json();
         
         if (!error) {
+            await clerkClient.users.updateUserMetadata(userId, {
+              publicMetadata : {
+                onBoardingDone: true
+              }
+            })
             return NextResponse.json({ error });
         }
-
-        await clerkClient.users.updateUserMetadata(userId, {
-          publicMetadata : {
-            onBoardingDone: true
-          }
-        })
 
         return NextResponse.json({ error });
     } catch (err) {
