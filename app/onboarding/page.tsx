@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { PhoneInput } from "react-international-phone";
+import watchdogLogo from "@/components/images/watchdogLogo.png";
+import Image from "next/image";
 
 function OnBoarding() {
   const [userDetails, setUserDetails] = useState({
@@ -40,8 +42,8 @@ function OnBoarding() {
     e.preventDefault();
   };
   return (
-    <div className="grid h-screen w-screen border border-gray-300 bg-gray-50">
-      <form className="h-full min-w-96 max-w-[50%] border border-gray-300 bg-gray-50 p-6 px-4">
+    <div className="grid h-screen w-screen grid-cols-2 border border-gray-300 bg-gray-50">
+      <form className="h-full min-w-96 border border-gray-300 bg-gray-50 px-4">
         <h1 className="mb-2 mt-8 text-3xl font-semibold text-gray-900">
           Onboarding
         </h1>
@@ -141,6 +143,9 @@ function OnBoarding() {
           Create Account
         </button>
       </form>
+      <div className="flex h-full w-[100%] items-center justify-center">
+        <Image alt="" className="w-42" src={watchdogLogo} />
+      </div>
     </div>
   );
 }
