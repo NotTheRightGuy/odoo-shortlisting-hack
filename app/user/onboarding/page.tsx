@@ -55,51 +55,42 @@ function OnBoarding() {
 
   return (
     <div className=" h-screen w-screen grid-cols-2 border border-gray-300 bg-gray-50 p-8 flex-center">
-      <SquareGridFaded faded={true}>
-        <form className=" min-w-96 border border-gray-300 bg-gray-100 p-4 rounded-xl">
-          <div className="flex  items-center justify-center">
-            <Image alt="" className="w-42 mt-4" src={watchdogLogo} />
-          </div>
-          <p className="mb-4 text-gray-600 text-center mt-2 text-sm opacity-75">
-            Set Up Your Guardian Account
-          </p>
+      <form className="p-4 min-w-96 border border-gray-300 bg-gray-50 rounded-xl">
+        <div className="flex  items-center justify-center">
+          <Image alt="" className="w-42 mt-4" src={watchdogLogo} />
+        </div>
+        <p className="mb-4 text-gray-600 text-center mt-2 text-sm opacity-75">
+          Set Up Your Guardian Account
+        </p>
 
+        <input
+          type="text"
+          className="mx-auto block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-gray-700"
+          placeholder="Name"
+          name="U_NAME"
+          value={userDetails.U_NAME}
+          onChange={handleChange}
+        />
+
+        <input
+          type="text"
+          className="mx-auto mt-6 block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-gray-700"
+          placeholder="Email"
+          name="U_EMAIL"
+          value={userDetails.U_EMAIL}
+          onChange={handleChange}
+        />
+        <div className="flex items-center justify-start gap-5">
           <input
-            type="text"
-            className="mx-auto block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-gray-700"
-            placeholder="Name"
-            name="U_NAME"
-            value={userDetails.U_NAME}
-            onChange={handleChange}
-          />
-          <input
-            className="mx-auto mt-6 block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-gray-700"
-            placeholder="Enter phone number"
-            value={userDetails.U_CONTACT}
-            name="U_CONTACT"
             type="number"
-            onChange={handleChange}
-            style={{ content: "''" }}
-          />
-          <input
-            type="text"
+            min={0}
             className="mx-auto mt-6 block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-gray-700"
-            placeholder="Email"
-            name="U_EMAIL"
-            value={userDetails.U_EMAIL}
+            placeholder="Age"
+            // name="age"
+            name="U_AGE"
+            value={userDetails.U_AGE}
             onChange={handleChange}
           />
-          <div className="flex items-center justify-start gap-5">
-            <input
-              type="number"
-              min={0}
-              className="mx-auto mt-6 block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-gray-700"
-              placeholder="Age"
-              // name="age"
-              name="U_AGE"
-              value={userDetails.U_AGE}
-              onChange={handleChange}
-            />
 
             <input
               type="text"
