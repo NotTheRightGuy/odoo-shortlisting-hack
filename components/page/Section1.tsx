@@ -31,7 +31,7 @@ function Section1() {
           </span>
         </p>
         <Link
-          href={"/"}
+          href={"/user/dashboard"}
           className="rounded-xl bg-slate-900 px-4 py-3 text-base font-bold text-slate-50"
         >
           Report Incident
