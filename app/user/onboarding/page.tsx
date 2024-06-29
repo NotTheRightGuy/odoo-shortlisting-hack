@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { auth } from "@clerk/nextjs/server";
 
 import { useUser } from "@clerk/nextjs";
 import watchdogLogo from "@/components/images/watchdogLogo.png";
@@ -12,8 +13,13 @@ function OnBoarding() {
   if (isSignedIn) {
     console.log(user);
   }
+
   if (isLoaded && !isSignedIn) {
     redirect("/auth/sign-in");
+  }
+
+  if (isLoaded && user.publicMetadata.onBoardingDone) {
+    redirect("/user/dashboard");
   }
 
   const [userDetails, setUserDetails] = useState({
@@ -27,7 +33,10 @@ function OnBoarding() {
     U_CITY: "",
     U_STATE: "",
     U_PINCODE: "",
+    userId : ""
   });
+
+
 
   const handleChange = (e: any) => {
     setUserDetails({
@@ -36,10 +45,16 @@ function OnBoarding() {
     });
   };
 
+//   if (isSignedIn && user) {
+//       setUserDetails({
+//         ...userDetails,
+//         userId: user.id
+//       });
+//     }
   const handleSubmit = (e: any) => {
     e.preventDefault();
 
-    fetch("/api/uploadUserData", {
+    fetch("/api/userCRUD/uploadUserData", {
       method: "POST",
       body: JSON.stringify(userDetails),
     })

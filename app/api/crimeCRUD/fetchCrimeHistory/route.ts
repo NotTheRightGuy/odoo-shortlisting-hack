@@ -15,8 +15,8 @@ const supabase = createClient<Database>(
 
 export async function GET(request: any, response: any) {
     try {
-        const { C_ID } = request.query;
-        const { data, error } = await supabase.from("CRIME_DETAILS").select("*").eq("C_ID", C_ID);
+        // const { C_ID } = request.query;
+        const { data, error } = await supabase.from("CRIME_DETAILS").select("*");
 
         if (error) {
             return NextResponse.json({ error });
