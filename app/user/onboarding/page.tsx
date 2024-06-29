@@ -62,7 +62,9 @@ function OnBoarding() {
       .then((data) => {
         data.error
           ? alert(data.error.message)
-          : alert("Account Created Successfully.");
+          : (alert("Account Created Successfully."),
+            window.location.href = "/user/dashboard"    
+        );
         console.log(data);
       })
       .catch((err) => console.log(err));
