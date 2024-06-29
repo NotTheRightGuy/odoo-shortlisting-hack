@@ -51,14 +51,14 @@ function OnBoarding() {
 
         <input
           type="text"
-          className="mx-auto block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-white"
+          className="mx-auto block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-gray-700"
           placeholder="Name"
           name="name"
           value={userDetails.name}
           onChange={handleChange}
         />
         <input
-          className="mx-auto mt-6 block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-white"
+          className="mx-auto mt-6 block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-gray-700"
           placeholder="Enter phone number"
           value={userDetails.phone}
           name="phone"
@@ -70,7 +70,7 @@ function OnBoarding() {
           <input
             type="number"
             min={0}
-            className="mx-auto mt-6 block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-white"
+            className="mx-auto mt-6 block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-gray-700"
             placeholder="Age"
             name="age"
             value={userDetails.age}
@@ -79,7 +79,7 @@ function OnBoarding() {
 
           <input
             type="text"
-            className="mx-auto mt-6 block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-white"
+            className="mx-auto mt-6 block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-gray-700"
             placeholder="Gender"
             name="gender"
             value={userDetails.gender}
@@ -89,7 +89,7 @@ function OnBoarding() {
         <div className="flex items-center justify-start gap-5">
           <input
             type="text"
-            className="mx-auto mt-6 block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-white"
+            className="mx-auto mt-6 block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-gray-700"
             placeholder="House no"
             name="houseNo"
             value={userDetails.houseNo}
@@ -97,7 +97,7 @@ function OnBoarding() {
           />
           <input
             type="text"
-            className="mx-auto mt-6 block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-white"
+            className="mx-auto mt-6 block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-gray-700"
             placeholder="Society Name"
             name="societyName"
             value={userDetails.societyName}
@@ -106,7 +106,7 @@ function OnBoarding() {
         </div>
         <input
           type="text"
-          className="mx-auto mt-6 block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-white"
+          className="mx-auto mt-6 block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-gray-700"
           placeholder="Area"
           name="area"
           value={userDetails.area}
@@ -115,7 +115,7 @@ function OnBoarding() {
         <div className="flex items-center justify-start gap-5">
           <input
             type="text"
-            className="mx-auto mt-6 block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-white"
+            className="mx-auto mt-6 block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-gray-700"
             placeholder="City"
             name="city"
             value={userDetails.city}
@@ -123,7 +123,7 @@ function OnBoarding() {
           />
           <input
             type="text"
-            className="mx-auto mt-6 block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-white"
+            className="mx-auto mt-6 block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-gray-700"
             placeholder="State"
             name="state"
             value={userDetails.state}
@@ -133,7 +133,7 @@ function OnBoarding() {
         <input
           type="number"
           min={6}
-          className="mx-auto mt-6 block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-white"
+          className="mx-auto mt-6 block h-12 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-left text-gray-700"
           placeholder="Pincode"
           name="pincode"
           value={userDetails.pincode}
