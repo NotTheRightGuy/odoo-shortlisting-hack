@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { PhoneInput } from "react-international-phone";
 import watchdogLogo from "@/components/images/watchdogLogo.png";
 import Image from "next/image";
+import { useRouter } from 'next/navigation'
+
 
 function OnBoarding() {
     //   const [userDetails, setUserDetails] = useState({
@@ -17,6 +19,8 @@ function OnBoarding() {
     //     state: "",
     //     pincode: "",
     //   });
+    const router = useRouter()
+
     const [userDetails, setUserDetails] = useState({
         U_NAME: "",
         U_EMAIL: "",
@@ -60,7 +64,13 @@ function OnBoarding() {
             .then((res) => res.json())
             .then((data) =>
                 {
-                    data.error ? alert(data.error.message) : alert("Account Created Successfully.")
+                    if (data.error) {
+                        alert(data.error.message)
+                    }
+                    else {
+                        alert("Account Created Successfully.")
+                        router.push('/user/dashboard')
+                    }
                     console.log(data)
 
                 })

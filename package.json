@@ -13,6 +13,10 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^5.1.6",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.21",
+    "@mui/x-data-grid": "^7.8.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@react-google-maps/api": "^2.19.3",
     "@supabase/ssr": "^0.4.0",

@@ -20,35 +20,39 @@ const supabase = createClient<Database>(
 );
 
 const validate = (data: any) => {
-    // const errors: any = {};
+
     let error = "";
+    if (!data.C_NAME) return error = "Name is required";
     if (!data.C_TYPE) return error = "Crime Type is required";
     if (!data.C_LATITUDE) return error = "Latitude is required";
     if (!data.C_LONGITUDE) return error = "Longitude is required";
     if (!data.C_TIME) return error = "Time is required";
     if (!data.C_DATE) return error = "Date is required";
-    if (!data.C_SOLVED) return error = "Solved is required";
+    if (!data.C_STATUS) return error = "Status is required";
+    if (!data.C_DESC) return error = "Description is required";
 
     return error;
 }
 
 export async function POST(request: any, response: any) {
     try {
-        const { C_TYPE, C_LATITUDE, C_LONGITUDE, C_TIME, C_DATE, C_SOLVED } = await request.json();
+        const { C_NAME, C_TYPE, C_LATITUDE, C_LONGITUDE, C_TIME, C_DATE, C_STATUS, C_DESC } = await request.json();
         
-        // console.log(C_TYPE, C_LATITUDE, C_LONGITUDE, C_TIME, C_DATE, C_SOLVED);
-        const isValid = validate({ C_TYPE, C_LATITUDE, C_LONGITUDE, C_TIME, C_DATE, C_SOLVED });
+        const isValid = validate({ C_NAME, C_TYPE, C_LATITUDE, C_LONGITUDE, C_TIME, C_DATE, C_STATUS, C_DESC });
+
         if (isValid !== "") {
             return NextResponse.json({error: {message : isValid}});
         }
 
         const { error } = await supabase.from("CRIME_DETAILS").insert({
+            C_NAME,
             C_TYPE,
             C_LATITUDE,
             C_LONGITUDE,
             C_TIME,
             C_DATE,
-            C_SOLVED
+            C_STATUS,
+            C_DESC
         });
 
         return NextResponse.json({ error });
