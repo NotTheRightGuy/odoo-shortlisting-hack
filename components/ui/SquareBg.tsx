@@ -40,7 +40,7 @@ export const SquareGridFaded = ({
       />
 
       {/* Text */}
-      <div className="text-8xl font-extrabold tracking-tight text-center font-geist w-fit h-fit text-transparent bg-clip-text bg-gradient-to-b from-slate-200 to-slate-50/60 absolute inset-0 m-auto z-[1000] invert">
+      <div className=" w-fit h-fit text-transparent absolute inset-0 m-auto z-[1000] invert">
         {children}
       </div>
 
