@@ -10,6 +10,8 @@ Interactive Map application for real time crime reporting
 4. Jeet Gajjar
 
 # Features Implemented
+
 ### In progress
+
 - Database design
 - Sign Up form
