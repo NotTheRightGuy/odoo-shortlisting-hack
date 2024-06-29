@@ -45,15 +45,15 @@ function OnBoarding() {
     });
   };
 
-//   if (isSignedIn && user) {
-//       setUserDetails({
-//         ...userDetails,
-//         userId: user.id
-//       });
-//     }
   const handleSubmit = (e: any) => {
-    e.preventDefault();
-
+      e.preventDefault();
+      if (isSignedIn && user) {
+          setUserDetails({
+            ...userDetails,
+            userId: user.id
+          });
+        }
+      
     fetch("/api/userCRUD/uploadUserData", {
       method: "POST",
       body: JSON.stringify(userDetails),
