@@ -1,4 +1,4 @@
-import PoliceDashboard from "@/components/page/PoliceDashboard";
+import Landing from "@/components/page/Landing";
 export default function Home() {
-  return <PoliceDashboard />;
+  return <Landing />;
 }
