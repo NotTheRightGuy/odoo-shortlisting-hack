@@ -24,7 +24,7 @@ function SolvedIcon() {
             stroke="#F8FAFC"
             stroke-width="3.33"
             stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
           />
         </g>
         <defs>

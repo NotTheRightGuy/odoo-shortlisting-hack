@@ -24,14 +24,14 @@ function Downfall() {
             stroke="#F8FAFC"
             stroke-width="2.78571"
             stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
           />
           <path
             d="M82.6071 69.25L66.8678 53.5107C66.6075 53.2555 66.2574 53.1126 65.8928 53.1126C65.5282 53.1126 65.1782 53.2555 64.9178 53.5107L58.5107 59.9179C58.2503 60.1731 57.9003 60.316 57.5357 60.316C57.1711 60.316 56.821 60.1731 56.5607 59.9179L46.3928 49.75"
             stroke="#F8FAFC"
             stroke-width="2.78571"
             stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
           />
         </g>
         <defs>

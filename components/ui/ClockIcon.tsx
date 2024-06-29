@@ -24,7 +24,7 @@ function ClockIcon() {
             stroke="#F8FAFC"
             stroke-width="4.08333"
             stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
           />
         </g>
         <defs>
