@@ -2,6 +2,7 @@
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import { useState, useEffect } from 'react';
+import Navbar from '@/components/ui/Navbar';
 
 
 export default function CrimeHistory() {
@@ -53,10 +54,14 @@ export default function CrimeHistory() {
             )
         })
     return(
-        <div>
+        <div className=''>
+            <Navbar/>
+            
             {/* "Checking" */}
+            <div className='p-10 mt-20'>
 
-            <DataGrid rows={rows} columns={columns} />
+                <DataGrid rows={rows} columns={columns} />
+            </div>
 
         </div>
     )
